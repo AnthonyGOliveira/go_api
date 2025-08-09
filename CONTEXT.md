@@ -2,6 +2,7 @@
 
 Este arquivo documenta decisões de arquitetura, contexto histórico e informações relevantes para o desenvolvimento do projeto.
 
+
 ## 2025-08-09
 - Projeto iniciado com estrutura padrão para APIs em Go.
 - Definido uso de arquivos de controle para histórico e contexto.
@@ -9,3 +10,4 @@ Este arquivo documenta decisões de arquitetura, contexto histórico e informaç
 - Configuração inicial da API HTTP com gorilla/mux
 - Adicionado endpoint /api/health para verificação de status
 - Middleware de logging implementado para monitoramento de requisições
+- Documentação das funcionalidades da pasta infra e Makefile detalhada no README.md para melhor compreensão da infraestrutura e automação do projeto.

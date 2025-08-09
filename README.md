@@ -57,9 +57,30 @@ go_api
 - **Endpoint:** `GET /api/health`
 - **Descrição:** Retorna status de saúde da API.
 
+
 ## Middleware
 
 - Middleware de logging registra cada requisição recebida no servidor.
+
+## Infraestrutura (`infra/`)
+
+A pasta `infra/` contém recursos para infraestrutura do projeto, incluindo:
+
+- **Dockerfile**: Define a imagem Docker para a aplicação, facilitando a criação de ambientes reprodutíveis.
+- **docker-entrypoint-initdb.d/**: Scripts de inicialização do banco de dados, como o `01-init.sql`, que prepara o banco com tabelas e dados iniciais ao subir o container.
+
+## Makefile
+
+O `Makefile` automatiza tarefas comuns do projeto, como:
+
+- **build**: Compila a aplicação.
+- **run**: Executa a aplicação localmente.
+- **test**: Roda os testes automatizados.
+- **docker-build**: Constrói a imagem Docker.
+- **docker-up**: Sobe os containers definidos (ex: aplicação e banco de dados).
+- **docker-down**: Para e remove os containers.
+
+Consulte o próprio arquivo para mais detalhes e comandos disponíveis.
 
 ## Controle de alterações
 

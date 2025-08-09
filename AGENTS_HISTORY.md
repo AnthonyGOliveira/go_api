@@ -4,3 +4,4 @@ Este arquivo registra interações, decisões e histórico de agentes (IA, bots,
 
 ## 2025-08-09
 - Configuração da API, endpoint /api/health e middleware de logging implementados por agente automatizado (GitHub Copilot).
+- Documentação das funcionalidades da pasta infra e Makefile adicionada ao README.md por agente automatizado (GitHub Copilot).
