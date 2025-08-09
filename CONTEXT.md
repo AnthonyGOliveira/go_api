@@ -6,3 +6,6 @@ Este arquivo documenta decisões de arquitetura, contexto histórico e informaç
 - Projeto iniciado com estrutura padrão para APIs em Go.
 - Definido uso de arquivos de controle para histórico e contexto.
 - Adicionada dependência gorilla/mux para roteamento HTTP.
+- Configuração inicial da API HTTP com gorilla/mux
+- Adicionado endpoint /api/health para verificação de status
+- Middleware de logging implementado para monitoramento de requisições

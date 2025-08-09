@@ -52,6 +52,15 @@ go_api
 - **Endpoint:** `POST /items`
 - **Descrição:** Cria um novo item. Requer um corpo JSON com os dados do item.
 
+### Health check
+
+- **Endpoint:** `GET /api/health`
+- **Descrição:** Retorna status de saúde da API.
+
+## Middleware
+
+- Middleware de logging registra cada requisição recebida no servidor.
+
 ## Controle de alterações
 
 Consulte o arquivo [`CHANGELOG.md`](CHANGELOG.md) para o histórico de alterações do projeto.
