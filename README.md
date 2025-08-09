@@ -4,21 +4,28 @@ Este projeto é uma API simples desenvolvida em Go para gerenciamento de itens, 
 
 ## Estrutura do Projeto
 
+
 ```
 go_api
 ├── cmd/
-│   └── main.go          # Ponto de entrada da aplicação
+│   └── main.go                        # Ponto de entrada da aplicação
 ├── internal/
 │   ├── handler/
-│   │   └── handler.go   # Handlers HTTP
+│   │   └── handler.go                 # Handlers HTTP
 │   └── service/
-│       └── service.go   # Lógica de negócio
-├── go.mod               # Dependências do módulo (inclui gorilla/mux)
-├── go.sum               # Checksums das dependências
-├── README.md            # Documentação do projeto
-├── CHANGELOG.md         # Histórico de alterações
-├── CONTEXT.md           # Contexto e decisões do projeto
-└── AGENTS_HISTORY.md    # Histórico de interações de agentes
+│       └── service.go                 # Lógica de negócio
+├── infra/                             # Infraestrutura do projeto
+│   ├── Dockerfile                     # Docker para banco de dados
+│   ├── .env                           # Variáveis de ambiente do banco
+│   └── docker-entrypoint-initdb.d/
+│       └── 01-init.sql                # Script de criação/seed do banco
+├── go.mod                             # Dependências do módulo (inclui gorilla/mux)
+├── go.sum                             # Checksums das dependências
+├── Makefile                           # Tarefas automatizadas (build, run, docker, etc)
+├── README.md                          # Documentação do projeto
+├── CHANGELOG.md                       # Histórico de alterações
+├── CONTEXT.md                         # Contexto e decisões do projeto
+└── AGENTS_HISTORY.md                  # Histórico de interações de agentes
 ```
 
 ## Como iniciar o projeto
