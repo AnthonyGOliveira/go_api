@@ -7,3 +7,7 @@ Todas as mudanças notáveis deste projeto serão documentadas neste arquivo.
 - Estrutura inicial do projeto Go API
 - README inicial
 - Arquivos de controle: CHANGELOG.md, CONTEXT.md, AGENTS_HISTORY.md
+
+## [0.1.1] - 2025-08-09
+### Adicionado
+- Dependência github.com/gorilla/mux v1.8.1

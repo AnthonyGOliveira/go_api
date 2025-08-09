@@ -13,7 +13,7 @@ go_api
 │   │   └── handler.go   # Handlers HTTP
 │   └── service/
 │       └── service.go   # Lógica de negócio
-├── go.mod               # Dependências do módulo
+├── go.mod               # Dependências do módulo (inclui gorilla/mux)
 ├── go.sum               # Checksums das dependências
 ├── README.md            # Documentação do projeto
 ├── CHANGELOG.md         # Histórico de alterações
@@ -32,6 +32,7 @@ go_api
 2. **Instale as dependências:**
    ```
    go mod tidy
+   # Dependência principal: github.com/gorilla/mux
    ```
 
 3. **Execute a aplicação:**
