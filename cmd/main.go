@@ -8,14 +8,16 @@ import (
 
 	"github.com/gorilla/mux"
 
+	"github.com/AnthonyGOliveira/go_api/internal/config"
+	"github.com/AnthonyGOliveira/go_api/internal/database"
 	"github.com/AnthonyGOliveira/go_api/internal/transport/http/middleware"
-	"github.com/AnthonyGOliveira/go_api/internal/transport/http/middleware/config"
 )
 
 const port string = ":8000"
 
 func main() {
 	serverConfig := config.LoadConfig()
+	database.NewPostgresConnection(serverConfig)
 	router := mux.NewRouter()
 	server := &http.Server{
 		Handler:      router,
