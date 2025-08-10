@@ -7,22 +7,19 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+
+	"github.com/AnthonyGOliveira/go_api/internal/transport/http/middleware"
+	"github.com/AnthonyGOliveira/go_api/internal/transport/http/middleware/config"
 )
 
 const port string = ":8000"
 
-func loggingMiddleware(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		log.Println(r.RequestURI)
-		next.ServeHTTP(w, r)
-	})
-}
-
 func main() {
+	serverConfig := config.LoadConfig()
 	router := mux.NewRouter()
 	server := &http.Server{
 		Handler:      router,
-		Addr:         port,
+		Addr:         ":" + serverConfig.ServerPort,
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}
@@ -30,7 +27,7 @@ func main() {
 		w.WriteHeader(http.StatusAccepted)
 		json.NewEncoder(w).Encode(map[string]bool{"ok": true})
 	})
-	router.Use(loggingMiddleware)
-	log.Println("Server running in", port)
+	router.Use(middleware.LoggingMiddleware)
+	log.Println("Server running in", serverConfig.ServerPort)
 	log.Fatal(server.ListenAndServe())
 }

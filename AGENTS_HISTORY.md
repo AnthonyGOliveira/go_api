@@ -1,3 +1,6 @@
+## 2025-08-09
+- Estrutura do projeto revisada e documentada por agente automatizado (GitHub Copilot).
+- Orientações sobre UUID, volumes Docker e padrões de nomes de arquivos adicionadas por agente automatizado (GitHub Copilot).
 # Histórico de Interações de Agentes
 
 Este arquivo registra interações, decisões e histórico de agentes (IA, bots, revisores automáticos, etc.) no projeto.

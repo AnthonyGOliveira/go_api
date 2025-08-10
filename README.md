@@ -1,3 +1,7 @@
+# Atualizado em 09/08/2025:
+# - Estrutura do projeto revisada e detalhada.
+# - Explicação sobre uso de UUID como chave primária no banco.
+# - Adicionadas instruções sobre volumes Docker e padrões de nomes de arquivos em Go.
 # Go API
 
 Este projeto é uma API simples desenvolvida em Go para gerenciamento de itens, permitindo buscar e criar itens via requisições HTTP.
