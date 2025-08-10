@@ -1,6 +1,3 @@
-# 09/08/2025:
-# - Decisão de utilizar UUID como chave primária para maior segurança e escalabilidade.
-# - Documentação reforçada sobre padrões de nomes de arquivos e boas práticas Docker.
 # Contexto do Projeto
 
 Este arquivo documenta decisões de arquitetura, contexto histórico e informações relevantes para o desenvolvimento do projeto.

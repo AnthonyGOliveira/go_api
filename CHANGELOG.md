@@ -1,8 +1,3 @@
-## [0.2.2] - 2025-08-09
-### Adicionado
-- Detalhamento da estrutura do projeto no README.md.
-- Orientações sobre UUID e volumes Docker.
-- Explicação sobre padrão snake_case para arquivos Go.
 # Changelog
 
 Todas as mudanças notáveis deste projeto serão documentadas neste arquivo.
