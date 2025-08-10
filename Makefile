@@ -16,4 +16,7 @@ stop:
 logs:
 	docker logs -f $(CONTAINER_NAME)
 
-.PHONY: build run stop logs
+start:
+	go run cmd/main.go
+
+.PHONY: build run stop logs start

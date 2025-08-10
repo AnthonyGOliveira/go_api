@@ -4,8 +4,8 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 -- ==========================
 -- Users table
 -- ==========================
-CREATE TABLE IF NOT EXISTS users (
-    id SERIAL PRIMARY KEY,
+CREATE TABLE users (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     name TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
@@ -30,8 +30,8 @@ EXECUTE FUNCTION set_updated_at();
 -- ==========================
 -- Seed data
 -- ==========================
-INSERT INTO users (name, email) VALUES
-('Alice Santos', 'alice@example.com'),
-('Bruno Oliveira', 'bruno@example.com'),
-('Carla Mendes', 'carla@example.com')
+INSERT INTO users (id, name, email) VALUES
+(uuid_generate_v4(), 'Alice Santos', 'alice@example.com'),
+(uuid_generate_v4(), 'Bruno Oliveira', 'bruno@example.com'),
+(uuid_generate_v4(), 'Carla Mendes', 'carla@example.com')
 ON CONFLICT (email) DO NOTHING;
