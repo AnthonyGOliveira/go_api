@@ -47,6 +47,22 @@ go_api
    go run cmd/main.go
    ```
 
+
+## Configuração e Variáveis de Ambiente
+
+O projeto utiliza um módulo de configuração centralizado em `internal/config/config.go`, que carrega variáveis de ambiente para conexão com o banco de dados e porta do servidor. As variáveis suportadas são:
+
+- `DB_HOST` (padrão: localhost)
+- `DB_PORT` (padrão: 5432)
+- `DB_USER` (padrão: dev)
+- `DB_PASSWORD` (padrão: dev)
+- `DB_NAME` (padrão: goapi)
+- `SERVER_PORT` (padrão: 8000)
+
+Essas variáveis podem ser definidas em um arquivo `.env` ou diretamente no ambiente de execução.
+
+---
+
 ## API
 
 ### Buscar itens
